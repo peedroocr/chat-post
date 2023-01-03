@@ -111,5 +111,5 @@ p {
 
 .authorFont {
     font-size: 0.7rem;
-    float: right
+    text-align: right;
 }

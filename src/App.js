@@ -35,7 +35,7 @@ const App = () => {
     const [itemMenu, setItemMenu] = useState(0);
     const [allRooms, setAllRooms] = useState([]);
     const [selectedRoom, setSelectedRoom] = useState('roomNotValid');
-    
+
 
 
 
@@ -138,6 +138,7 @@ const App = () => {
 
                 <Route path={'/UploaPost'} exact element={userJoinRoom.room !== '' || userJoinRoom.userName !== '' ?
                     <UploadPost
+                        userJoinRoom={userJoinRoom}
                         setCurrentMessage={setCurrentMessage}
                         sendMessage={sendMessage}
                         allMessages={allMessages}

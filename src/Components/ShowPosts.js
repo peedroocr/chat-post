@@ -17,8 +17,8 @@ const ShowPosts = ({ allPosts, navigate }) => {
                 <article className="two columns">
                     <h6>{post.title}</h6>
                     <p className="postCredit">{post.description}</p>
-                    <p className="authorFont">Author: {post.author}</p>
-                    <button onClick={() => selectThisPost(post.id)} >Edit Post</button>
+                    <p className="authorFont" style={{ display: 'block' }} >Author: {post.author}</p>
+                    <button onClick={() => selectThisPost(post.id)} style={{ width: '100%' }}>Edit Post</button>
                 </article>
             </div >)
         })}

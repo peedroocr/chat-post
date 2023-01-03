@@ -4,7 +4,7 @@ import { addNewPost } from '../features/posts/postsSlice';
 
 
 
-const UploadPost = () => {
+const UploadPost = ({ userJoinRoom }) => {
 
     const dispatch = useDispatch();
 
@@ -18,7 +18,7 @@ const UploadPost = () => {
 
     const onChangeAuthor = (e) => setNewAuthor(e.target.value)
 
-    const addNewPostFunction = () => dispatch(addNewPost({ id: '', title: newTitle, description: newDescription, author: newAuthor }))
+    const addNewPostFunction = () => dispatch(addNewPost({ id: '', title: newTitle, description: newDescription, author: userJoinRoom.userName }))
 
     return (
         <div>
@@ -31,7 +31,10 @@ const UploadPost = () => {
                         </div>
                         <div className="three columns">
                             <label>Author</label>
-                            <input className="u-full-width" type="email" onChange={onChangeAuthor} placeholder="Author name..." />
+                            <label>{userJoinRoom.userName}</label>
+
+                            {//<input className="u-full-width" type="email" onChange={onChangeAuthor} placeholder="Author name..." />
+                            }
                         </div>
                     </div>
                     <div className="row">

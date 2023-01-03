@@ -1,4 +1,3 @@
-
 import MessageInput from './MessageInput'
 
 import BodyChat from './BodyChat'
